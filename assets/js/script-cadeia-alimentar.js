@@ -24,10 +24,64 @@ function draggableCadeia() {
       });
     }
   });
+
 }
+$("#btnEnviar").on("click", function () {
+  var messages = [];
+
+  if ($("#limite1").children("#Produtor").length) {
+    messages.push("Parabéns! Você demonstrou compreender que as plantas são organismos produtores, capazes de produzir seu próprio alimento por meio da fotossíntese, sendo fundamentais para a cadeia alimentar dos ecossistemas.");
+    } else {
+    messages.push("Lembre-se de que as plantas produzem seu próprio alimento a partir da luz solar e são fundamentais para a cadeia alimentar.");
+    }
+    
+    if ($("#limite2").children("#primario").length) {
+    messages.push("Parabéns! Você demonstrou compreender que esse animal é um detritívoro, alimentando-se de restos de matéria orgânica em decomposição, desempenhando um importante papel na reciclagem de nutrientes nos ecossistemas.");
+    } else {
+    messages.push("Lembre-se de que esse animal se alimenta de restos de matéria orgânica em decomposição, desempenhando um importante papel na reciclagem de nutrientes nos ecossistemas.");
+    }
+    
+    if ($("#limite3").children("#secundario").length) {
+    messages.push("Parabéns! Você demonstrou compreender que os peixes que se alimentam de outros seres vivos são consumidores, desempenhando um importante papel na cadeia alimentar dos ecossistemas aquáticos como predadores e consumidores de níveis tróficos mais elevados.");
+    } else {
+    messages.push("Lembre-se de que esse animal se alimenta de outros seres vivos, sendo um importante membro da cadeia alimentar dos ecossistemas aquáticos.");
+    }
+    
+    if ($("#limite4").children("#terciario").length) {
+    messages.push("Parabéns! Você demonstrou compreender que as garças se alimentam de outros animais, como peixes e pequenos mamíferos, o que as coloca em um nível trófico mais elevado na cadeia alimentar dos ecossistemas em que vivem.");
+    } else {
+    messages.push("Lembre-se de que as garças, por se alimentarem de outros animais, como peixes e pequenos mamíferos, estão em um nível trófico mais elevado na cadeia alimentar dos ecossistemas em que vivem.");
+    }
+
+  var modalContent = messages.join("<br><br>");
+
+
+  if ($("#myModal").length === 0) {
+    var modalHtml = '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+    '<div class="modal-dialog" role="document">' +
+    '<div class="modal-content">' +
+    '<div class="modal-header estilo-pontas">' +
+    '<h5 class="modal-title" id="exampleModalLabel fs-5 desc-modal"><strong>Fase 1 concluída com sucesso.</strong></h5>' +
+    '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'+
+    '</div>' +
+    '<div class="modal-body">' +
+    '<p>'+modalContent +'</p>' +
+    '</div>' +
+    '<div class="modal-footer estilo-pontas">' +
+    '<button type="button" class="btn btn-secondary  btn-fechar" data-bs-dismiss="modal">Fechar</button>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+
+    $("body").append(modalHtml);
+  } else {
+    $("#myModal .modal-body p").text(modalContent);
+  }
+
+  $("#myModal").modal("show");
+});
+
+
 
 draggableCadeia();
-
-// function funcao() {
-//   document.getElementById("resposta1").innerHTML = "Consumidor Primário";
-// }
