@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid correcao-adaptativa">
         <section class="cadeia-alimentar jogo-1">
             <div class="text-center">
                 <div class="justify-content-center">
-                    <div class="row justify-content-center my-2 title-1 ">
+                    <div class="row justify-content-center my-2 title-1">
                         <div class="col-4 my-5">
                             <h2 class="h2-1">Fase 1</h2>
                             <h1 class="h1-1"> <strong> Cadeia Alimentar</strong></h1>
@@ -53,32 +53,33 @@
                     </div>
 
                     <div class="grupo fundo2 w-100 justify-content-center my-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-2 mb-3">
+                        <div class="justify-content-center">
+                        <div class="ignora"></div>
+                            <div class="mb-3 horizontal m-5">
                                 <div id="Produtor" class="ui-widget-content elemento draggable">
                                     <img id="antes-1" class="animal" src="assets/img/fase1-bto1.png" alt="Produtor: Alga">
                                 </div>
                             </div>
-                            <div class="col-md-2 mb-3">
+                            <div class="mb-3 horizontal m-5">
                                 <div id="terciario" class="ui-widget-content elemento draggable">
                                     <img id="antes-4" class="animal" src="assets/img/fase1-bto4.png" alt="Consumidor terciário: Ave">
                                 </div>
                             </div>
-                            <div class="col-md-2 mb-3">
+                            <div class="mb-3 horizontal m-5">
                                 <div id="primario" class="ui-widget-content elemento draggable">
                                     <img id="antes-2" class="animal" src="assets/img/fase1-bto2.png"alt="Consumidor primário: Caramujo">
                                 </div>
                             </div>
-                            <div class="col-md-2 mb-3">
+                            <div class="mb-3 horizontal m-5">
                                 <div id="secundario" class="ui-widget-content elemento draggable">
                                     <img id="antes-3" class="animal" src="assets/img/fase1-bto3.png" alt="Consumidor Secundário: Peixe">
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-lg btn-verificar w-50 m-3" id="btnEnviar">Verificar</button>
+                        <button type="button" class="btn btn-verificar w-25 m-5 disabled" id="btnEnviar">Verificar</button>
                     </div>
                 </div>
-            
+            </div>     
         </section>
         <section class="cadeia-alimentar d-none jogo-2">
             <div class="text-center">
@@ -95,7 +96,7 @@
                     </div>
                     <div class="grupo w-100 justify-content-center">
                         <div class="row justify-content-center position-relative">
-                            <img src="assets/img/bg-fase2.png" class="img-fluid" alt="Teia alimentar">
+                            <img src="assets/img/bg-fase2.png" class="img-fluid limite" alt="Teia alimentar">
                         </div>
                         <div>
                             <button type="button" class="position-absolute btn-interrogacao text-center btn-1"  id="interrogacao1"  data-toggle="modal" data-target="#modalTeia"> ? </button>
@@ -122,12 +123,12 @@
                             <div class="position-absolute btn-resposta text-center btn-10"><span id="resposta10"> </span></div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-lg btn-verificar w-50 m-3" id="btnFinalizar">Verificar</button>
+                    <button type="button" class="btn btn-verificar w-25 m-3 disabled" id="btnEnviar">Verificar</button>
                 </div>
         </section>
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -139,7 +140,7 @@
                     <div class="modal-body">
                         <div class="btn-group-vertical d-grid gap-2" role="group" aria-label="Basic example">
                             <button type="button" id="prod" class="btn btn-lg btn-secondary opcoes">Produtor</button>
-                            <button type="button" id="consumidor1" class="btn btn-lg btn-secondary opcoes" onclick="funcao()">Consumidor Primário</button>
+                            <button type="button" id="consumidor1" class="btn btn-lg btn-secondary opcoes">Consumidor Primário</button>
                             <button type="button" id="consumidor2" class="btn btn-lg btn-secondary opcoes">Consumidor Secundário</button>
                             <button type="button" id="consumidor3" class="btn btn-lg btn-secondary opcoes">Consumidor Terciário</button>
                             <button type="button" id="consumidor4" class="btn btn-lg btn-secondary opcoes">Consumidor Quaternário</button>
@@ -151,9 +152,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
+    <div class="modo-smart">
+        <div class="text-center">
+          <p class="p-paisagem text-center"><img src="assets/Img/vire.gif" class="img-fluid img-paisagem d-inline-block"><br><strong>Por favor, gire o aparelho para o modo paisagem.</strong></p>
+        </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>

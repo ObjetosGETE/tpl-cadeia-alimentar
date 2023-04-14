@@ -19,9 +19,9 @@
     --elemento-height: 208px;
     --elemento-background-color: #f2a863;
     --elemento-margin-top: 10px;
-    --btn-verificar-bg: #790305;
+    --btn-verificar-bg: #f2a863;
     --btn-verificar-font: #790305;
-    --btn-verificar-border: #f2a863;
+    --btn-verificar-border: #69d7bd;
     --btn-verificar-hover: #f4d6C5;
     --cor-estilo-pontas-bg: #f2a863;
     --cor-estilo-pontas-texto: #790305;
@@ -44,6 +44,15 @@
 body {
     background-color: var(--background-color);
     font-family: var(--font-alimentar);
+}
+
+.cadeia-alimentar{
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    left: calc(50% - 1920px / 2);
+
+    margin: auto;
 }
 
 .cadeia-alimentar {
@@ -79,14 +88,26 @@ body {
     background-color: var(--btn-verificar-bg);
     box-shadow: 4px 4px var(--btn-verificar-border);
     border: 2px solid var(--btn-verificar-border);
-    color: white;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .btn-verificar:hover {
     background-color: var(--btn-verificar-hover);
     color: var(--btn-verificar-font);
     transform: scale(1.1);
+}
+
+.btn-prox-fase{
+    background-color: var(--btn-verificar-hover);
+    color: var(--btn-verificar-font);
+    transform: scale(1.1);
+    border: none;
+}
+
+.disabled {
+    background-color: #333;
+    box-shadow: none;
 }
 
 /*****************************************************************/
@@ -119,13 +140,22 @@ body {
     border-radius: var(--bordinha);
     background-color: var(--fundo2-background-color);
     min-width: 100px;
+  }
+  
+  .horizontal {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ignora {
+	height: 123px;
 }
 
 .seta {
-    width: 6%;
-    height: 6%;
-    left: -62px;
-    top: 129px;
+	width: 6%;
+	height: 6%;
+	left: -78px;
+	top: 129px;
 }
 
 /*****************************************************************/
@@ -136,6 +166,10 @@ body {
     background-color: var(--cor-estilo-pontas-bg);
     color: var(--cor-estilo-pontas-texto);
     font-weight: bold;
+}
+
+.limite{
+    width: 60%;
 }
 
 .opcoes {
@@ -198,57 +232,95 @@ body {
 /*****************************************************************/
 
 .btn-1 {
-    top: 264px;
-    left: 799px;
+	top: 253px;
+	left: 863px;
 }
 
 .btn-2 {
-    top: 448px;
-    left: 898px;
+	top: 359px;
+	left: 920px;
 }
 
 .btn-i {
-    top: 268px;
-    left: 596px;
+	top: 258px;
+	left: 726px;
 }
 
 .btn-r {
-    top: 268px;
-    left: 357px;
+	top: 258px;
+	left: 763px;
 }
 
 .btn-4 {
-    top: 532px;
-    left: 104px;
+	top: 427px;
+	left: 441px;
 }
 
 .btn-5 {
-    top: 733px;
-    left: 416px;
+	top: 634px;
+	left: 436px;
 }
 
 .btn-6 {
-    top: 1167px;
-    left: 593px;
+	top: 797px;
+	left: 733px;
 }
 
 .btn-7 {
-    top: 1281px;
-    left: 1381px;
+	top: 962px;
+	left: 1155px;
 }
 
 .btn-8 {
-    top: 847px;
-    left: 1535px;
+	top: 819px;
+	left: 1304px;
 }
 
 .btn-9 {
-    top: 726px;
-    left: 1386px;
+	top: 527px;
+	left: 1209px;
 }
 
 .btn-10 {
-    top: 554px;
-    left: 1283px;
+	top: 420px;
+	left: 1024px;
 }
 
+/**************************************************************************/
+/***************************** vire o celular ****************************/
+/************************************************************************/
+
+.p-paisagem {
+    color: white;
+    text-align: center;
+}
+
+.img-paisagem {
+    max-width: 70% !important;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (orientation: portrait) {
+    .modo-smart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--cadeia-alimentar-background-color);
+        z-index: 9999999999999999999;
+    }
+}
+
+@media (min-width: 480px) {
+    .modo-smart {
+        display: none;
+    }
+}
