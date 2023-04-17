@@ -35,7 +35,7 @@
     --cor-btn-interrogacao-texto: #790305;
     --cor-btn-interrogacao-hover-bg: #69d7bd;
     --cor-img-interrogacao: #000;
-    --cor-btn-resposta-bg: #f2a863;
+    --cor-btn-resposta-bg: #f4d6c5;
     --cor-btn-resposta-borda: #790305;
     --cor-btn-resposta-texto: #790305;
     --btn-sombrinha: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -46,7 +46,7 @@ body {
     font-family: var(--font-alimentar);
 }
 
-.cadeia-alimentar{
+.cadeia-alimentar {
     width: 1920px;
     height: 1080px;
     position: fixed;
@@ -98,7 +98,7 @@ body {
     transform: scale(1.1);
 }
 
-.btn-prox-fase{
+.btn-prox-fase {
     background-color: var(--btn-verificar-hover);
     color: var(--btn-verificar-font);
     transform: scale(1.1);
@@ -140,22 +140,22 @@ body {
     border-radius: var(--bordinha);
     background-color: var(--fundo2-background-color);
     min-width: 100px;
-  }
-  
-  .horizontal {
-	display: inline-block;
-	vertical-align: top;
+}
+
+.horizontal {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .ignora {
-	height: 123px;
+    height: 123px;
 }
 
 .seta {
-	width: 6%;
-	height: 6%;
-	left: -78px;
-	top: 129px;
+    width: 6%;
+    height: 6%;
+    left: -78px;
+    top: 129px;
 }
 
 /*****************************************************************/
@@ -168,7 +168,7 @@ body {
     font-weight: bold;
 }
 
-.limite{
+.limite {
     width: 60%;
 }
 
@@ -227,63 +227,112 @@ body {
     font-weight: bold;
 }
 
+select::-ms-expand {
+    display: none;
+}
+
 /*******************************************************************/
 /************************** posicao botões ************************/
 /*****************************************************************/
 
+#rapina1 {
+    top: 253px;
+    left: 863px;
+}
+
+#rapina2 {
+    top: 253px;
+    left: 459px;
+}
+
+#rapina3 {
+    top: 359px;
+    left: 920px;
+}
+
+#cobra1 {
+    top: 644px;
+    left: 289px;
+}
+
+#cobra2 {
+    top: 427px;
+    left: 286px;
+}
+
+#sapo1 {
+    top: 799px;
+    left: 575px;
+}
+
+#lagarta1 {
+    top: 966px;
+    left: 880px;
+}
+
+#arvore1 {
+    top: 822px;
+    left: 1317px;
+}
+
+#passaro1 {
+    top: 532px;
+    left: 1208px;
+}
+
+#passaro2 {
+    top: 418px;
+    left: 1028px;
+}
+
 .btn-1 {
-	top: 253px;
-	left: 863px;
+    top: 252px;
+    left: 863px;
 }
 
 .btn-2 {
-	top: 359px;
-	left: 920px;
+    top: 354px;
+    left: 920px;
 }
 
 .btn-i {
-	top: 258px;
-	left: 726px;
-}
-
-.btn-r {
-	top: 258px;
-	left: 763px;
+    top: 249px;
+    left: 737px;
 }
 
 .btn-4 {
-	top: 427px;
-	left: 441px;
+    top: 423px;
+    left: 564px;
 }
 
 .btn-5 {
-	top: 634px;
-	left: 436px;
+    top: 641px;
+    left: 564px;
 }
 
 .btn-6 {
-	top: 797px;
-	left: 733px;
+    top: 794px;
+    left: 856px;
 }
 
 .btn-7 {
-	top: 962px;
-	left: 1155px;
+    top: 964px;
+    left: 1155px;
 }
 
 .btn-8 {
-	top: 819px;
-	left: 1304px;
+    top: 819px;
+    left: 1304px;
 }
 
 .btn-9 {
-	top: 527px;
-	left: 1209px;
+    top: 529px;
+    left: 1209px;
 }
 
 .btn-10 {
-	top: 420px;
-	left: 1024px;
+    top: 416px;
+    left: 1024px;
 }
 
 /**************************************************************************/

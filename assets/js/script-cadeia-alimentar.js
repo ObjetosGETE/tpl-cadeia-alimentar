@@ -56,7 +56,7 @@ function draggableCadeia() {
     appendTo: "body",
     delay: 200,
     opacity: 0,
-    stop: function(event, ui) {
+    stop: function (event, ui) {
       if (ui.helper.data("ui-sortable-previous-container") !== null) {
         numConectados++;
       } else {
@@ -70,18 +70,18 @@ function draggableCadeia() {
   });
 
   $(".encaixe").sortable({
-    stop: function(event, ui) {
+    stop: function (event, ui) {
       $(ui.item).data("ui-draggable").elementConnected = true;
-      $("#antes-1").on("click", function() {
+      $("#antes-1").on("click", function () {
         $(this).attr("src", "assets/img/fase1-1.png");
       });
-      $("#antes-2").on("click", function() {
+      $("#antes-2").on("click", function () {
         $(this).attr("src", "assets/img/fase1-2.png");
       });
-      $("#antes-3").on("click", function() {
+      $("#antes-3").on("click", function () {
         $(this).attr("src", "assets/img/fase1-3.png");
       });
-      $("#antes-4").on("click", function() {
+      $("#antes-4").on("click", function () {
         $(this).attr("src", "assets/img/fase1-4.png");
       });
     }
@@ -92,7 +92,7 @@ function feedbackFase1() {
   $("#btnEnviar").on("click", function () {
     var messages = [];
 
-    if ($("#limite1").children("#Produtor").length) {
+    if ($("#limite1").children("#produtor").length) {
       messages.push("<strong>Resposta Correta!</strong><br>Parabéns! Você demonstrou compreender que as plantas são organismos produtores, capazes de produzir seu próprio alimento por meio da fotossíntese, sendo fundamentais para a cadeia alimentar dos ecossistemas.");
     } else {
       messages.push("<strong>Resposta Incorreta!</strong><br>Lembre-se de que as plantas produzem seu próprio alimento a partir da luz solar e são fundamentais para a cadeia alimentar.");
@@ -155,5 +155,143 @@ function feedbackFase1() {
   });
 }
 
-feedbackFase1();
+function exibeLista() {
+  $(document).ready(function () {
+    $("#interrogacao1").click(function () {
+      $("#rapina1").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao2").click(function () {
+      $("#rapina3").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao3").click(function () {
+      $("#rapina2").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao5").click(function () {
+      $("#cobra1").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao4").click(function () {
+      $("#cobra2").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao6").click(function () {
+      $("#sapo1").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao7").click(function () {
+      $("#lagarta1").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao8").click(function () {
+      $("#arvore1").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao9").click(function () {
+      $("#passaro1").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#interrogacao10").click(function () {
+      $("#passaro2").removeClass("d-none");
+      $(this).addClass("d-none");
+    });
+  });
+}
+
+function feedbackFase2() {
+  $(".listaRapina").on("change", function () {
+    var resposta = $(this).val();
+    if (resposta == "consumidor-terciario" || resposta == "consumidor-quaternario" || resposta == "consumidor-secundario") {
+      $("#mensagemResposta").html("Você acertou!");
+    } else {
+      $("#mensagemResposta").html("Quase acertou! As aves de rapina se alimentam de outros animais que estão em níveis tróficos mais baixos na cadeia alimentar");
+    }
+    $('#respostaModal').modal('show');
+  });
+
+  $(".listaCobra").on("change", function () {
+    var resposta = $(this).val();
+    if (resposta == "consumidor-terciario" || resposta == "consumidor-secundario") {
+      $("#mensagemResposta").html("Você acertou!");
+    } else {
+      $("#mensagemResposta").html("Quase lá! As serpentes se alimentam de outros animais que estão em um nível trófico abaixo delas na cadeia alimentar.");
+    }
+    $('#respostaModal').modal('show');
+  });
+
+  $(".listaSapo").on("change", function () {
+    var resposta = $(this).val();
+    if (resposta == "consumidor-secundario") {
+      $("#mensagemResposta").html("Você acertou!");
+    } else {
+      $("#mensagemResposta").html("Quase acertou! Os sapos se alimentam dos animais que estão em um nível trófico abaixo deles na cadeia alimentar");
+    }
+    $('#respostaModal').modal('show');
+  });
+
+  $(".listaLagarta").on("change", function () {
+    var resposta = $(this).val();
+    if (resposta == "consumidor-primario") {
+      $("#mensagemResposta").html("Você acertou!");
+    } else {
+      $("#mensagemResposta").html("Quase lá! As lagartas se alimentam diretamente dos seres vivos que iniciam a cadeia alimentar.");
+    }
+    $('#respostaModal').modal('show');
+  });
+
+  $(".listaArvore").on("change", function () {
+    var resposta = $(this).val();
+    if (resposta == "produtor") {
+      $("#mensagemResposta").html("Você acertou!");
+    } else {
+      $("#mensagemResposta").html("Quase lá! Lembre-se de que as árvores são os seres vivos que iniciam a cadeia alimentar e fornecem alimento para outros animais.");
+    }
+    $('#respostaModal').modal('show');
+  });
+
+  $(".listaPassaro").on("change", function () {
+    var resposta = $(this).val();
+    if (resposta == "consumidor-primario" || resposta == "consumidor-secundario") {
+      $("#mensagemResposta").html("Você acertou!");
+    } else {
+      $("#mensagemResposta").html("Quase acertou! Os pássaros podem se alimentar diretamente dos produtores ou de outros animais que já se alimentaram dos produtores");
+    }
+    $('#respostaModal').modal('show');
+  });
+}
+
+
+
 draggableCadeia();
+feedbackFase1();
+exibeLista();
+feedbackFase2();
